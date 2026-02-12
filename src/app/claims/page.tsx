@@ -1,10 +1,13 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import PageHero from '@/components/marketing/PageHero';
-import { motion } from 'framer-motion';
 import { Phone, Clock, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Platinum Claims Support | LifeAssure",
+    description: "When the moment arrives, our performance becomes your security. A claims process designed for speed, empathy, and absolute discretion.",
+};
 
 const claimSteps = [
     {
@@ -35,9 +38,7 @@ export default function ClaimsPage() {
 
             <section className="py-32 bg-ivory relative">
                 <div className="container mx-auto px-6 text-center max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                    <div
                         className="p-16 rounded-[4rem] bg-navy-900 text-ivory shadow-2xl overflow-hidden relative"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 to-transparent" />
@@ -49,18 +50,15 @@ export default function ClaimsPage() {
                                 Initiate Claim Online <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
             <section className="py-32 container mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-12">
                     {claimSteps.map((step, i) => (
-                        <motion.div
+                        <div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1 }}
                             className="relative group p-10 rounded-[3rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-700"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gold-500/10 text-gold-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
@@ -72,7 +70,7 @@ export default function ClaimsPage() {
                             <div className="absolute top-10 right-10 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <CheckCircle className="w-6 h-6 text-gold-500" />
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </section>

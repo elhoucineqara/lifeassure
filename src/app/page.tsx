@@ -8,6 +8,12 @@ import Testimonials from "@/components/marketing/Testimonials";
 import FAQ from "@/components/marketing/FAQ";
 import CTA from "@/components/marketing/CTA";
 import LatestInsights from "@/components/marketing/LatestInsights";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "LifeAssure | Premium Protection for Your Legacy",
+  description: "Experience the next level of life insurance with LifeAssure. Bespoke coverage designed to protect what matters most.",
+};
 
 export default function Home() {
   return (

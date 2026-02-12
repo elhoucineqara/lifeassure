@@ -58,8 +58,8 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7245366364935377"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
+        
       </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-ivory text-navy-900 selection:bg-gold-500/30`}
